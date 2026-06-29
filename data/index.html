@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hall of Malevolence — Roster</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d0d0d;
+      font-family: 'Inter', sans-serif;
+      color: #ccc;
+      min-height: 100vh;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 2.5rem 1rem 2rem;
+      border-bottom: 0.5px solid #2a2a2a;
+      background: #111;
+    }
+    .hero-tag {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: #555;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .hero h1 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #e8e8e8;
+      letter-spacing: 0.02em;
+    }
+    .hero h1 span { color: #666; }
+    .hero-sub { margin-top: 0.4rem; font-size: 12px; color: #3a3a3a; }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1.25rem 1rem;
+      border-bottom: 0.5px solid #1e1e1e;
+      background: #0f0f0f;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 22px; font-weight: 500; color: #ccc; }
+    .stat-label { font-size: 10px; color: #3a3a3a; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    /* FILTERS */
+    .filters {
+      display: flex;
+      gap: 8px;
+      padding: 1rem 1.5rem;
+      flex-wrap: wrap;
+      border-bottom: 0.5px solid #1a1a1a;
+      background: #0d0d0d;
+    }
+    .filter-btn {
+      font-size: 12px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 0.5px solid #252525;
+      background: transparent;
+      color: #444;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .filter-btn:hover { border-color: #444; color: #888; }
+    .filter-btn.active { border-color: #555; color: #ccc; background: #1a1a1a; }
+
+    /* SEARCH */
+    .search-wrap {
+      padding: 0.75rem 1.5rem;
+      border-bottom: 0.5px solid #1a1a1a;
+      background: #0d0d0d;
+    }
+    .search-input {
+      width: 100%;
+      max-width: 320px;
+      background: #141414;
+      border: 0.5px solid #222;
+      border-radius: 8px;
+      padding: 7px 12px;
+      font-size: 13px;
+      color: #ccc;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input::placeholder { color: #333; }
+    .search-input:focus { border-color: #333; }
+
+    /* ROSTER */
+    .roster { padding: 0.5rem 1rem 3rem; }
+
+    .header-row {
+      display: grid;
+      grid-template-columns: 36px 1fr 165px 105px 130px 120px;
+      gap: 12px;
+      padding: 6px 14px;
+      margin-bottom: 4px;
+    }
+    .header-row span {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2a2a2a;
+    }
+
+    .member-row {
+      display: grid;
+      grid-template-columns: 36px 1fr 165px 105px 130px 120px;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: 0.5px solid transparent;
+      margin-bottom: 2px;
+      transition: background 0.1s, border-color 0.1s;
+    }
+    .member-row:hover { background: #131313; border-color: #1e1e1e; }
+
+    .member-index { font-size: 12px; color: #2e2e2e; text-align: right; }
+    .member-name { font-size: 13px; font-weight: 500; color: #d0d0d0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .rank-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 163px;
+    }
+
+    .role-pill { font-size: 11px; color: #3a3a3a; }
+    .cell-muted { font-size: 12px; color: #2e2e2e; }
+
+    .no-results {
+      text-align: center;
+      padding: 3rem;
+      color: #2e2e2e;
+      font-size: 13px;
+    }
+
+    /* RANK COLORS */
+    .r-hall-lord   { color: #ff3333; border: 0.5px solid #ff333344; background: #180000; }
+    .r-hall-lady   { color: #ffa6fb; border: 0.5px solid #ffa6fb44; background: #180018; }
+    .r-exalted     { color: #58d9fc; border: 0.5px solid #58d9fc44; background: #001c22; }
+    .r-eminent     { color: #1abc9b; border: 0.5px solid #1abc9b44; background: #001a12; }
+    .r-revered     { color: #ff8652; border: 0.5px solid #ff865244; background: #1a0e00; }
+    .r-exultant    { color: #a07aff; border: 0.5px solid #5900ff44; background: #0e0022; }
+    .r-emeritus    { color: #cc55cc; border: 0.5px solid #540c5a66; background: #140014; }
+    .r-menace      { color: #71ff9e; border: 0.5px solid #71ff9e44; background: #001a0a; }
+    .r-sentinel    { color: #8b7f75; border: 0.5px solid #8b7f7544; background: #111110; }
+    .r-dignitary   { color: #5588ff; border: 0.5px solid #1e5cda44; background: #000a1c; }
+    .r-vexillarius { color: #d85352; border: 0.5px solid #d8535244; background: #1a0808; }
+    .r-esquier     { color: #ffff00; border: 0.5px solid #ffff0044; background: #1a1a00; }
+    .r-legion      { color: #ae83ff; border: 0.5px solid #ae83ff44; background: #0e0022; }
+    .r-venator     { color: #ff84a1; border: 0.5px solid #ff84a144; background: #1a0012; }
+    .r-hnic        { color: #5588bb; border: 0.5px solid #00244d66; background: #00244d22; }
+    .r-darh        { color: #555; border: 0.5px solid #2a2a2a; background: #080808; }
+    .r-associate   { color: #4aaa1a; border: 0.5px solid #1d660744; background: #0a1400; }
+    .r-na          { color: #444; border: 0.5px solid #222; background: #111; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-tag">SA:MP Group Roster</div>
+  <h1>Hall <span>of</span> Malevolence</h1>
+  <div class="hero-sub">Last updated: <span id="last-updated">—</span></div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num" id="total-count">—</div><div class="stat-label">Total</div></div>
+  <div class="stat"><div class="stat-num" id="leader-count">—</div><div class="stat-label">Leaders</div></div>
+  <div class="stat"><div class="stat-num" id="cl-count">—</div><div class="stat-label">Co-Leaders</div></div>
+  <div class="stat"><div class="stat-num" id="member-count">—</div><div class="stat-label">Members</div></div>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+  <button class="filter-btn" onclick="setFilter('Leader', this)">Leaders</button>
+  <button class="filter-btn" onclick="setFilter('Co-Leader', this)">Co-Leaders</button>
+  <button class="filter-btn" onclick="setFilter('Member', this)">Members</button>
+</div>
+
+<div class="search-wrap">
+  <input class="search-input" type="text" placeholder="Search by name..." oninput="onSearch(this.value)" />
+</div>
+
+<div class="roster">
+  <div class="header-row">
+    <span>#</span>
+    <span>Name</span>
+    <span>Rank</span>
+    <span>Role</span>
+    <span>Invited by</span>
+    <span>Joined</span>
+  </div>
+  <div id="roster-list"></div>
+</div>
+
+<script>
+const RANK_ORDER = [
+  'Hall Lord','Hall Lady','Exalted','Eminent','Revered','Exultant',
+  'Emeritus',
+  'Menace','Sentinel','Dignitary','Vexillarius',
+  'Esquier','Legion','Venator','Dead And Rotting In Hell','H.N.I.C','Associate'
+];
+
+const RANK_CSS = {
+  'Hall Lord':              'r-hall-lord',
+  'Hall Lady':              'r-hall-lady',
+  'Exalted':                'r-exalted',
+  'Eminent':                'r-eminent',
+  'Revered':                'r-revered',
+  'Exultant':               'r-exultant',
+  'Emeritus':               'r-emeritus',
+  'Menace':                 'r-menace',
+  'Sentinel':               'r-sentinel',
+  'Dignitary':              'r-dignitary',
+  'Vexillarius':            'r-vexillarius',
+  'Esquier':                'r-esquier',
+  'Legion':                 'r-legion',
+  'Venator':                'r-venator',
+  'Dead And Rotting In Hell':'r-darh',
+  'H.N.I.C':               'r-hnic',
+  'Associate':              'r-associate'
+};
+
+let allMembers = [];
+let currentFilter = 'all';
+let currentSearch = '';
+
+async function loadRoster() {
+  try {
+    const res = await fetch('data/roster.json?t=' + Date.now());
+    const data = await res.json();
+
+    allMembers = data.members.sort((a, b) => {
+      const ai = RANK_ORDER.indexOf(a.rank);
+      const bi = RANK_ORDER.indexOf(b.rank);
+      return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+    });
+
+    document.getElementById('last-updated').textContent =
+      new Date(data.lastUpdated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    updateStats();
+    render();
+  } catch (e) {
+    document.getElementById('roster-list').innerHTML =
+      '<div class="no-results">Failed to load roster data.</div>';
+  }
+}
+
+function updateStats() {
+  const leaders = allMembers.filter(m => m.role === 'Leader').length;
+  const cls     = allMembers.filter(m => m.role === 'Co-Leader').length;
+  const mems    = allMembers.filter(m => m.role === 'Member' || m.role === 'N/A').length;
+  document.getElementById('total-count').textContent  = allMembers.length;
+  document.getElementById('leader-count').textContent = leaders;
+  document.getElementById('cl-count').textContent     = cls;
+  document.getElementById('member-count').textContent = mems;
+}
+
+function render() {
+  const list = document.getElementById('roster-list');
+  list.innerHTML = '';
+
+  let filtered = allMembers;
+
+  if (currentFilter !== 'all') {
+    filtered = filtered.filter(m =>
+      currentFilter === 'Member'
+        ? (m.role === 'Member' || m.role === 'N/A')
+        : m.role === currentFilter
+    );
+  }
+
+  if (currentSearch) {
+    const q = currentSearch.toLowerCase();
+    filtered = filtered.filter(m => m.name.toLowerCase().includes(q));
+  }
+
+  if (!filtered.length) {
+    list.innerHTML = '<div class="no-results">No members found.</div>';
+    return;
+  }
+
+  filtered.forEach((m, i) => {
+    const div = document.createElement('div');
+    div.className = 'member-row';
+    const css  = RANK_CSS[m.rank] || 'r-na';
+    const role = m.role === 'N/A' ? '—' : m.role;
+    div.innerHTML = `
+      <span class="member-index">${i + 1}</span>
+      <span class="member-name">${escHtml(m.name)}</span>
+      <span class="rank-badge ${css}">${escHtml(m.rank)}</span>
+      <span class="role-pill">${role}</span>
+      <span class="cell-muted">${m.invitedBy ? escHtml(m.invitedBy) : '—'}</span>
+      <span class="cell-muted">${m.joined ? escHtml(m.joined) : '—'}</span>
+    `;
+    list.appendChild(div);
+  });
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+
+function onSearch(val) {
+  currentSearch = val.trim();
+  render();
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+loadRoster();
+</script>
+</body>
+</html>
