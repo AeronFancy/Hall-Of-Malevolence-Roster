@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14",
+  "lastUpdated": "2026-07-14T15:01:56.376Z",
   "members": [
     {
       "name": "Nirv",
@@ -1280,6 +1280,14 @@
       "role": "Member",
       "invitedBy": "",
       "joined": ""
+    },
+    {
+      "name": "Naven.",
+      "accountId": "3461094",
+      "rank": "Associate",
+      "role": "Member",
+      "invitedBy": "Snipez[NC]",
+      "joined": "2026-07-14T15:01:56.375Z"
     }
   ]
 }
