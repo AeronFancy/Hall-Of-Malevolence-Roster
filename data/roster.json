@@ -514,14 +514,6 @@
       "joined": ""
     },
     {
-      "name": "Aarlex",
-      "accountId": "3731010",
-      "rank": "Legion",
-      "role": "Member",
-      "invitedBy": "",
-      "joined": ""
-    },
-    {
       "name": "4p4c0b4",
       "accountId": "",
       "rank": "Venator",
@@ -1037,6 +1029,14 @@
       "name": ".413",
       "accountId": "",
       "rank": "Dead And Rotting In Hell",
+      "role": "Member",
+      "invitedBy": "",
+      "joined": ""
+    },
+    {
+      "name": "Aarlex",
+      "accountId": "3731010",
+      "rank": "H.N.I.C",
       "role": "Member",
       "invitedBy": "",
       "joined": ""
