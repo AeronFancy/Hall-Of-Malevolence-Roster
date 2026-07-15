@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T15:04:50.743Z",
+  "lastUpdated": "2026-07-15T16:33:14.535Z",
   "members": [
     {
       "name": "Nirv",
@@ -107,14 +107,6 @@
     },
     {
       "name": "Rina.",
-      "accountId": "",
-      "rank": "Emeritus",
-      "role": "N/A",
-      "invitedBy": "",
-      "joined": ""
-    },
-    {
-      "name": "Regicide",
       "accountId": "",
       "rank": "Emeritus",
       "role": "N/A",
@@ -366,6 +358,14 @@
       "accountId": "",
       "rank": "Vexillarius",
       "role": "Co-Leader",
+      "invitedBy": "",
+      "joined": ""
+    },
+    {
+      "name": "Regicide",
+      "accountId": "2936816",
+      "rank": "Esquier",
+      "role": "Member",
       "invitedBy": "",
       "joined": ""
     },
