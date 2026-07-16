@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16T14:57:18.913Z",
+  "lastUpdated": "2026-07-16T15:00:59.030Z",
   "members": [
     {
       "name": "Nirv",
@@ -1098,6 +1098,14 @@
       "joined": ""
     },
     {
+      "name": "Tedros",
+      "accountId": "3341157",
+      "rank": "H.N.I.C",
+      "role": "Member",
+      "invitedBy": "",
+      "joined": ""
+    },
+    {
       "name": "Frostbyte.",
       "accountId": "",
       "rank": "Associate",
@@ -1187,14 +1195,6 @@
     },
     {
       "name": "FaizDT.",
-      "accountId": "",
-      "rank": "Associate",
-      "role": "Member",
-      "invitedBy": "",
-      "joined": ""
-    },
-    {
-      "name": "Tedros",
       "accountId": "",
       "rank": "Associate",
       "role": "Member",
