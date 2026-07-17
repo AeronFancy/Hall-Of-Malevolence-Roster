@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16T15:05:30.448Z",
+  "lastUpdated": "2026-07-17T15:51:05.611Z",
   "members": [
     {
       "name": "Nirv",
@@ -338,6 +338,14 @@
       "joined": ""
     },
     {
+      "name": "TpS.Rabbit",
+      "accountId": "13672",
+      "rank": "Dignitary",
+      "role": "Co-Leader",
+      "invitedBy": "",
+      "joined": ""
+    },
+    {
       "name": "KDAViD",
       "accountId": "",
       "rank": "Vexillarius",
@@ -395,14 +403,6 @@
     },
     {
       "name": "xenonite",
-      "accountId": "",
-      "rank": "Esquier",
-      "role": "Member",
-      "invitedBy": "",
-      "joined": ""
-    },
-    {
-      "name": "TpS.Rabbit",
       "accountId": "",
       "rank": "Esquier",
       "role": "Member",
