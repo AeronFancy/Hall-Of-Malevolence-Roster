@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T15:51:05.611Z",
+  "lastUpdated": "2026-07-17T16:26:09.931Z",
   "members": [
     {
       "name": "Nirv",
@@ -340,6 +340,14 @@
     {
       "name": "TpS.Rabbit",
       "accountId": "13672",
+      "rank": "Dignitary",
+      "role": "Co-Leader",
+      "invitedBy": "",
+      "joined": ""
+    },
+    {
+      "name": "TpS.Lexso",
+      "accountId": "3423414",
       "rank": "Dignitary",
       "role": "Co-Leader",
       "invitedBy": "",
@@ -923,14 +931,6 @@
     },
     {
       "name": "SwaGer.",
-      "accountId": "",
-      "rank": "Dead And Rotting In Hell",
-      "role": "Member",
-      "invitedBy": "",
-      "joined": ""
-    },
-    {
-      "name": "TpS.Lexso",
       "accountId": "",
       "rank": "Dead And Rotting In Hell",
       "role": "Member",
