@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T15:04:26.232Z",
+  "lastUpdated": "2026-07-19T16:23:18.299Z",
   "members": [
     {
       "name": "Nirv",
@@ -1336,6 +1336,14 @@
       "role": "Member",
       "invitedBy": "Snipez[NC]",
       "joined": "2026-07-19T00:47:26.149Z"
+    },
+    {
+      "name": "3in1x",
+      "accountId": "3749917",
+      "rank": "Associate",
+      "role": "Member",
+      "invitedBy": "slatty",
+      "joined": "2026-07-19T16:23:18.299Z"
     }
   ]
 }
