@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-20T18:10:56.188Z",
+  "lastUpdated": "2026-07-20T18:11:14.188Z",
   "members": [
     {
       "name": "Nirv",
@@ -266,14 +266,6 @@
       "joined": ""
     },
     {
-      "name": "Eunoia",
-      "accountId": "",
-      "rank": "Sentinel",
-      "role": "Co-Leader",
-      "invitedBy": "",
-      "joined": ""
-    },
-    {
       "name": "Nidja.",
       "accountId": "",
       "rank": "Sentinel",
@@ -288,6 +280,14 @@
       "role": "Co-Leader",
       "invitedBy": "TpS.Kimmy",
       "joined": "2026-07-15T16:36:58.601Z"
+    },
+    {
+      "name": "Eunoia",
+      "accountId": "2794223",
+      "rank": "Dignitary",
+      "role": "Co-Leader",
+      "invitedBy": "",
+      "joined": ""
     },
     {
       "name": "LongMenGuiFeng",
