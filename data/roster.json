@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-29T23:39:42.784Z",
+  "lastUpdated": "2026-07-29T23:39:51.103Z",
   "members": [
     {
       "name": "Nirv",
@@ -544,14 +544,6 @@
       "role": "Member",
       "invitedBy": "TheMightyQ",
       "joined": "2026-07-29T06:11:02.750Z"
-    },
-    {
-      "name": "obr",
-      "accountId": "3745986",
-      "rank": "Legion",
-      "role": "Member",
-      "invitedBy": "Snipez[NC]",
-      "joined": "2026-07-29T23:35:28.503Z"
     },
     {
       "name": "Game\\_Farm.",
@@ -1144,6 +1136,14 @@
       "role": "Member",
       "invitedBy": "",
       "joined": ""
+    },
+    {
+      "name": "obr",
+      "accountId": "3745986",
+      "rank": "Associate",
+      "role": "Member",
+      "invitedBy": "Snipez[NC]",
+      "joined": "2026-07-29T23:35:28.503Z"
     },
     {
       "name": "Frostbyte.",
