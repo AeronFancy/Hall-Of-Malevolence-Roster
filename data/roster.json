@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-30T10:08:04.432Z",
+  "lastUpdated": "2026-07-30T14:26:01.840Z",
   "members": [
     {
       "name": "Nirv",
@@ -1376,6 +1376,14 @@
       "role": "Member",
       "invitedBy": "fSc\\_Jazzimus",
       "joined": "2026-07-28T22:12:55.634Z"
+    },
+    {
+      "name": "Risaad",
+      "accountId": "3749031",
+      "rank": "Associate",
+      "role": "Member",
+      "invitedBy": "Snipez[NC]",
+      "joined": "2026-07-30T14:26:01.840Z"
     }
   ]
 }
