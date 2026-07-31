@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-30T15:31:23.665Z",
+  "lastUpdated": "2026-07-31T09:06:50.167Z",
   "members": [
     {
       "name": "Nirv",
@@ -1376,6 +1376,14 @@
       "role": "Member",
       "invitedBy": "Snipez[NC]",
       "joined": "2026-07-30T14:26:01.840Z"
+    },
+    {
+      "name": "Trezic",
+      "accountId": "3748481",
+      "rank": "Associate",
+      "role": "Member",
+      "invitedBy": "TheMightyQ",
+      "joined": "2026-07-31T09:06:50.167Z"
     }
   ]
 }
